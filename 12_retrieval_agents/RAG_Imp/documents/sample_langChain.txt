@@ -1,0 +1,105 @@
+LangGraph — Overview & How It Differs from LangChain
+What Is LangGraph?
+
+LangGraph is a framework built on top of LangChain for creating stateful, reliable, multi-step agent workflows using graphs.
+It enables deterministic agent behavior with explicit control over loops, retries, branching, and checkpoints.
+It is designed for production-grade, multi-agent, and long-running workflows.
+
+LangGraph vs LangChain — Key Differences
+Feature	LangChain	LangGraph
+Purpose	Tools, prompts, chains, agents	State-driven workflows and agent orchestration
+Execution Model	Linear pipelines	Graph-based transitions
+Loops & Branching	Hard to manage	First-class support
+Determinism	Often unpredictable	Explicit and reproducible
+Memory	Local per chain	Global shared state
+Multi-Agent Systems	Manual setup	Built-in design patterns
+Reliability	Medium	High (checkpoints, recovery)
+
+Summary:
+LangChain provides components (LLMs, tools, prompts, memory).
+LangGraph provides the architecture for how those components interact using graph-based workflows.
+
+How Agents Are Created Using LangGraph
+
+LangGraph structures an agent as a graph with:
+
+State: Shared memory across nodes
+
+Nodes: Functions, LLM calls, tools, sub-agents
+
+Edges: Logic determining which node executes next
+
+Checkpoints: Persistent snapshots for reliability
+
+A typical LangGraph agent workflow:
+
+Define the state model
+
+Implement nodes (e.g., reasoning, tool call, validation)
+
+Add conditional edges for flow control
+
+Compile the graph into an agent
+
+Run the agent with inputs
+
+This approach makes agent behavior transparent and predictable compared to standard LangChain agents, which rely on model reasoning for control flow.
+
+What Is MCP (Model Context Protocol)?
+
+MCP is a standardized protocol that allows LLMs to access external tools and systems through isolated tool servers.
+These tools can include:
+
+Databases
+
+Filesystems
+
+Cloud APIs
+
+Browsers
+
+Custom business logic
+
+Each tool runs in its own secure environment, and the LLM interacts with them using a typed, structured protocol.
+
+Why MCP?
+
+Safe, sandboxed execution
+
+Works with any LLM model
+
+Local and cloud support
+
+Standardized, reusable, versioned tools
+
+How MCP Works With LangChain and LangGraph
+MCP + LangChain
+
+LangChain can load MCP tool servers and convert them into LangChain tools.
+This allows LLMs to call:
+
+SQL tools
+
+Search tools
+
+File tools
+
+Custom data processors
+
+LangChain serves as the bridge between the LLM and the external system.
+
+MCP + LangGraph
+
+LangGraph integrates MCP tools within its nodes, enabling reliable, multi-step workflows using MCP-based capabilities.
+
+Within LangGraph:
+
+LLM nodes decide when to call MCP tools
+
+Tool nodes execute securely
+
+Checkpoints preserve tool results
+
+Control flow handles retries and branching
+
+Multiple agents can coordinate using MCP tools

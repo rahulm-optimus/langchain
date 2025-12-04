@@ -1,0 +1,60 @@
+2025-12-04 11:17:54 | INFO | ============================================================
+2025-12-04 11:17:54 | INFO | RAG SYSTEM STARTING
+2025-12-04 11:17:54 | INFO | Start Time: 2025-12-04 11:17:54
+2025-12-04 11:17:54 | INFO | Model: llama3.2
+2025-12-04 11:17:54 | INFO | Documents Path: ./documents
+2025-12-04 11:17:54 | INFO | Vector Store Path: ./chroma_db_new
+2025-12-04 11:17:54 | INFO | ============================================================
+2025-12-04 11:17:54 | INFO | Existing vector store found
+2025-12-04 11:18:07 | INFO | Loading existing vector store...
+2025-12-04 11:18:07 | INFO | Vector store loaded successfully
+2025-12-04 11:18:07 | INFO | Testing vector store content...
+2025-12-04 11:18:07 | INFO | Vector store contains 3 documents
+2025-12-04 11:18:14 | INFO | Test query 'LangChain': 2 results found
+2025-12-04 11:18:16 | INFO | Test query 'Python': 2 results found
+2025-12-04 11:18:17 | INFO | Test query 'agents': 2 results found
+2025-12-04 11:18:17 | INFO | Test query 'tools': 2 results found
+2025-12-04 11:18:17 | INFO | Setting up RAG chain...
+2025-12-04 11:18:18 | INFO | Retriever configured (k=5, similarity search)
+2025-12-04 11:18:18 | INFO | RAG chain ready
+2025-12-04 11:18:18 | INFO | System ready for queries
+2025-12-04 11:18:52 | INFO | Query: whats tool in document
+2025-12-04 11:18:53 | INFO | Retrieved 3 relevant documents
+2025-12-04 11:18:53 | INFO |   Document 1: documents\sample_langChain.txt (Page N/A)
+2025-12-04 11:18:53 | INFO |   Document 2: documents\sample_langChain.txt (Page N/A)
+2025-12-04 11:18:53 | INFO |   Document 3: documents\sample_langChain.txt (Page N/A)
+2025-12-04 11:19:59 | INFO | Answer generated (211 chars)
+2025-12-04 11:20:18 | INFO | Query: whats tool in langchain
+2025-12-04 11:20:19 | INFO | Retrieved 3 relevant documents
+2025-12-04 11:20:19 | INFO |   Document 1: documents\sample_langChain.txt (Page N/A)
+2025-12-04 11:20:19 | INFO |   Document 2: documents\sample_langChain.txt (Page N/A)
+2025-12-04 11:20:19 | INFO |   Document 3: documents\sample_langChain.txt (Page N/A)
+2025-12-04 11:21:38 | INFO | Answer generated (869 chars)
+2025-12-04 11:21:51 | WARNING | Received interrupt signal (Ctrl+C)
+2025-12-04 11:21:51 | INFO | ============================================================
+2025-12-04 11:21:51 | INFO | APPLICATION STOPPED
+2025-12-04 11:21:51 | INFO | End Time: 2025-12-04 11:21:51
+2025-12-04 11:21:51 | INFO | Total Runtime: 0h 3m 57s
+2025-12-04 11:21:51 | INFO | ============================================================
+2025-12-04 11:21:52 | INFO | ============================================================
+2025-12-04 11:21:52 | INFO | APPLICATION STOPPED
+2025-12-04 11:21:52 | INFO | End Time: 2025-12-04 11:21:52
+2025-12-04 11:21:52 | INFO | Total Runtime: 0h 3m 57s
+2025-12-04 11:21:52 | INFO | ============================================================
+2025-12-04 11:37:54 | INFO | ==================================================
+2025-12-04 11:37:54 | INFO | App started | Model: llama3.2
+2025-12-04 11:38:55 | INFO | Rebuilding vector store
+2025-12-04 11:38:55 | INFO | Loaded 1 documents
+2025-12-04 11:38:55 | INFO | Created 3 chunks
+2025-12-04 11:38:55 | INFO | Vector store creation started (3 chunks)
+2025-12-04 11:39:58 | INFO | Vector store created in 1.0min
+2025-12-04 11:39:59 | INFO | RAG chain initialized
+2025-12-04 12:42:46 | INFO | Query: what is the difference between langchain and langgraph
+2025-12-04 12:44:17 | INFO | Retrieved 3 docs | Answer: 1225 chars
+2025-12-04 12:49:03 | INFO | Query: what is the difference between mcp and langgraph
+2025-12-04 12:50:21 | INFO | Retrieved 3 docs | Answer: 624 chars
+2025-12-04 12:51:15 | WARNING | Interrupted by user (Ctrl+C)
+2025-12-04 12:51:15 | INFO | App stopped | Runtime: 1h 13m 21s
+2025-12-04 12:51:15 | INFO | ==================================================
+2025-12-04 12:51:16 | INFO | App stopped | Runtime: 1h 13m 21s
+2025-12-04 12:51:16 | INFO | ==================================================
